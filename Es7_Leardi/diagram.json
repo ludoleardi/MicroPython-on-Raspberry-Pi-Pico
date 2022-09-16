@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Ludovico Leardi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 23.32,
+      "left": -96.81,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [ [ "pico:GP5", "led1:A", "green", [ "h0" ] ], [ "led1:C", "pico:GND.4", "black", [ "v0" ] ] ]
+}

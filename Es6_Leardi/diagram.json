@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "Ludovico Leardi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -1.65,
+      "left": -188.36,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -39.75, "left": 108.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP28", "pot1:SIG", "green", [ "h0" ] ],
+    [ "pot1:GND", "pico:GND.8", "black", [ "v0" ] ],
+    [ "pot1:VCC", "pico:3V3", "red", [ "v0" ] ]
+  ]
+}

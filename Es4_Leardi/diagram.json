@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Ludovico Leardi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -27.17,
+      "left": -114.98,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 138.49,
+      "left": -148.65,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "pico:GP5", "green", [ "v0" ] ],
+    [ "pico:GND.2", "led1:C", "black", [ "h0" ] ],
+    [ "pico:GND.4", "btn1:2.r", "black", [ "h0" ] ],
+    [ "pico:GP12", "btn1:1.r", "green", [ "h0" ] ]
+  ]
+}
